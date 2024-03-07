@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Black Background Example</title>
+        </head>
+        <body style="background-color: black; color: white;">
+            <div style="background-color: #000; color: #fff;">
+            </div>
+        </body>
+        </html>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>White Text Example</title>
+        </head>
+        <body style="color: white; background-color: black;">
+            <div style="color: #fff; background-color: #000;">
+            </div>
+        </body>
+        </html>
+                
+    
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Code Snippets</h1>
+            <style>
+                h1{
+                    text-align: center;
+                    font-size: 75px;
+                }
+            </style>
+        </header>
+    
+    </body>
+    <main>
+        <p><code class="language-cpp"></code></p>
+    
+        <h3>Code Block: Example 1</h3>
+        <pre>
+    <code> class="language-cpp">
+        #include <iomanip>
+            #include <cmath>
+            #include <iostream>
+            
+            using namespace std;
+            
+            int main() {
+            
+                double radius = 0;
+            
+                //prompt
+                cout << "Enter the radius of a circle\n";
+                cout << "**\n";
+            
+                // input
+                cin >> radius;
+            
+                //math
+                cout << fixed << setprecision(2);
+                const float pi = 3.141592;
+                float circumference = 2 * pi * radius;
+                float area = pi * pow(radius,2);
+            
+                //chart design
+                string separator = "+--------+---------------+---------+\n";
+                string h1 = " radius ", h2 = " circumference ", h3 = " area    ";
+                string headers = "|" + h1 + "|" + h2 + "|" + h3 + "|\n";
+            
+                // Output the chart
+                cout << separator;
+                cout << headers;
+                cout << separator;
+                cout << left;
+                cout << "| " << setw(7) << radius;
+                cout << "| " << setw(14) << circumference;
+                cout << "| " << setw(8) << area << "|\n";
+                cout << separator;
+            
+            return 0;
+            }
+            
+    </code>
+        </pre>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-c.min.js"></script>
+
+    <main>
+        <p>Description: This code snippet is simple. It calculates the circumference and area given the radius.</p>
+    </main>
+    <style>
+        p{
+            font-size: 15px;
+        }
+    </style>
+
+
+    <main>
+        <p><code class="language-c++"></code></p>
+    
+        <h3>Code Block: Example 2</h3>
+
+        <style>
+            h3{
+                background-color: #333;
+                        padding: 15px;
+            }
+        </style>
+        <pre>
+
+    <code class="language-c++">
+
+        <p1>
+            #include <iostream>
+                #include <fstream>
+                #include <string>
+                using namespace std;
+                
+                int main(){
+                // string variable 
+                    string inputFileName = " ";
+                    
+                
+                    ifstream iFile;
+                    long long runningTotal = 0;
+                
+                // opening the files
+                    iFile.open("'data.txt"); // opening the files
+                
+                
+                // entering file name and checking that its a file
+                
+                    do {
+                        cout << "Enter file name" << endl;
+                        cout << "**";
+                        getline (cin, inputFileName);
+                        iFile.open(inputFileName);
+                        cout << endl;
+                // failure of file
+                        if (iFile.fail()){
+                            iFile.clear();
+                            iFile.ignore();
+                            cout << "Error: Invalid file name" << endl;// error message
+                            continue;
+                        }
+                    }while (!iFile.is_open());
+                   
+                    // initializing nums
+                    int num1 = 0, num2 = 0;
+                
+                    // outputting the numbers
+                       while (!iFile.eof()) {
+                
+                        iFile >> num1 >> num2;
+                
+                            if (iFile.fail()) {
+                                iFile.clear();
+                                iFile.ignore(100, '\n');
+                                cout << "Error in line" << endl;
+                                continue;
+                            }
+                
+                            int result = num1 + num2;// initializing results 
+                            runningTotal += result;
+                
+                            cout << num1 << " + " << num2 << " = " << result << endl;
+                        }
+                
+                        cout << "\n";
+                        cout << "Running total = " << runningTotal << endl;
+                
+                    iFile.close(); // REMEMBER to close the file AT THE END
+                    return 0;
+                    }
+        </p1>
+
+        <style>
+            p1{
+                text-align: center;
+                font-size: 20;
+            }
+        </style>
+    </code>
+        </pre>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-c.min.js"></script>
+
+    <main>
+        <p>This code snippet is a little more complicated. This code shows my first time using files within c++. You choose a file to import, I was given three, and within that file the code will solve all of the math equations within the file. <p>
+            </p>
+        </p>
+        </main>
+</main>
+</html>
